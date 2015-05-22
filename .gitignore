@@ -9,3 +9,4 @@ include/bits
 tools/musl-gcc
 lib/musl-gcc.specs
 src/internal/version.h
+*~
