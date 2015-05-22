@@ -1,3 +1,5 @@
+#if !__EMSCRIPTEN__ /* Emscripten controls this itself */
+
 #include <stdlib.h>
 #include <stdint.h>
 #include <limits.h>
@@ -44,3 +46,5 @@ toobig:
 }
 
 weak_alias(__simple_malloc, malloc);
+
+#endif

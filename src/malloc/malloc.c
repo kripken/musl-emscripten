@@ -1,3 +1,5 @@
+#if !__EMSCRIPTEN__ /* Emscripten controls this itself */
+
 #define _GNU_SOURCE
 #include <stdlib.h>
 #include <string.h>
@@ -530,3 +532,5 @@ void free(void *p)
 
 	unlock_bin(i);
 }
+
+#endif

@@ -1,3 +1,5 @@
+#if !__EMSCRIPTEN__ /* Emscripten controls this itself */
+
 #include <stdlib.h>
 #include <errno.h>
 
@@ -20,3 +22,5 @@ void *calloc(size_t m, size_t n)
 	}
 	return p;
 }
+
+#endif

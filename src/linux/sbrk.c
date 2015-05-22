@@ -1,8 +1,8 @@
+#if !__EMSCRIPTEN__ /* Emscripten controls sbrk itself */
 #include <stdint.h>
 #include <errno.h>
 #include "syscall.h"
 
-#if !__EMSCRIPTEN__ /* Emscripten controls sbrk itself */
 void *sbrk(intptr_t inc)
 {
 	if (inc) return (void *)__syscall_ret(-ENOMEM);

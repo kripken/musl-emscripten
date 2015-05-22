@@ -1,3 +1,4 @@
+#if !__EMSCRIPTEN__ /* Emscripten controls this itself */
 #include <stdlib.h>
 #include <errno.h>
 
@@ -11,3 +12,4 @@ int posix_memalign(void **res, size_t align, size_t len)
 	*res = mem;
 	return 0;
 }
+#endif
